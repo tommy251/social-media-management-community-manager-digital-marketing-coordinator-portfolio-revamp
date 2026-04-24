@@ -7,7 +7,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [
-    tailwindcss(),        // Add this
+    tailwindcss(),        // Tailwind v4 Vite plugin
     TanStackRouterVite(),
     react(),
     tsconfigPaths(),
