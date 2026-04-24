@@ -1,7 +1,8 @@
 import { Outlet, Link, createRootRoute, HeadContent } from "@tanstack/react-router";
 import { OceanScene } from "@/components/OceanScene";
 
-import appCss from "../styles.css?url";
+// Direct import — Vite handles extraction and injection automatically
+import "../styles.css";
 
 function NotFoundComponent() {
   return (
@@ -38,12 +39,6 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
     ],
   }),
   component: RootComponent,
